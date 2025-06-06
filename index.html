@@ -63,6 +63,7 @@
 
     .doctor-card {
       display: flex;
+      flex-direction: row;
       align-items: center;
       background-color: var(--secondary-color);
       padding: 1em;
@@ -122,15 +123,18 @@
     }
 
     .form-wrapper {
-      width: 100vw;
+      width: 100%;
       max-width: 1000px;
       margin: 2em auto 0 auto;
       display: flex;
       justify-content: center;
+      box-sizing: border-box;
+      padding: 0 1em;
     }
 
     iframe {
       width: 100%;
+      min-width: 100%;
       height: 2200px;
       border: none;
     }
@@ -142,6 +146,21 @@
       font-size: 0.85em;
       color: #555;
       border-top: 1px solid #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .doctor-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .doctor-image {
+        margin: 0 0 1em 0;
+      }
+
+      iframe {
+        height: 2500px;
+      }
     }
   </style>
 </head>
@@ -218,7 +237,14 @@
     </div>
   </div>
 </section>
-
+  
+<section>
+  <h2>هل لديك سؤال؟</h2>
+  <p>يمكنك التواصل معنا عبر الطرق التالية:</p>
+  <a class="button" href="mailto:samsxzabadani@gmail.com">راسلنا عبر البريد الإلكتروني</a>
+  <a class="button" href="https://wa.me/15198722939" target="_blank">تواصل معنا على واتساب</a>
+</section>
+  
 <section id="register">
   <h2>📋 سجل الآن</h2>
   <p>
@@ -229,13 +255,6 @@
       يبدو أن النموذج لم يتم تحميله. <a href="https://docs.google.com/forms/d/e/1FAIpQLSfmPJ3h-j3PnB_vn9yZkwMJtLt5Tsjj7gyl55ot9vOfBjcavQ/viewform" target="_blank">اضغط هنا لفتحه مباشرة</a>.
     </iframe>
   </div>
-</section>
-
-<section>
-  <h2>هل لديك سؤال؟</h2>
-  <p>يمكنك التواصل معنا عبر الطرق التالية:</p>
-  <a class="button" href="mailto:samsxzabadani@gmail.com">راسلنا عبر البريد الإلكتروني</a>
-  <a class="button" href="https://wa.me/15198722939" target="_blank">تواصل معنا على واتساب</a>
 </section>
 
 <footer>
