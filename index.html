@@ -7,7 +7,7 @@
   <style>
     :root {
       --primary-color: #0a9396;
-      --secondary-color: #94d2bd;
+      --secondary-color: #e9f5f2;
       --background-color: #fdfcfb;
       --accent-color: #ee9b00;
       --font-color: #333;
@@ -62,16 +62,29 @@
     }
 
     .doctor-card {
+      display: flex;
+      align-items: center;
       background-color: var(--secondary-color);
-      padding: 1.5em;
+      padding: 1em;
       margin-bottom: 1.5em;
-      border-radius: 12px;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.07);
-      transition: transform 0.2s ease-in-out;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
-    .doctor-card:hover {
-      transform: scale(1.02);
+    .doctor-image {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #ccc;
+      background-image: url('https://via.placeholder.com/80');
+      background-size: cover;
+      background-position: center;
+      margin-left: 1em;
+      flex-shrink: 0;
+    }
+
+    .doctor-info {
+      flex-grow: 1;
     }
 
     .doctor-card h3 {
@@ -138,39 +151,57 @@
   <h2>الأطباء الزائرون ومواعيدهم</h2>
 
   <div class="doctor-card">
-    <h3>د. عمار غانم</h3>
-    <span>التخصص: أمراض صدرية</span>
-    <span>اليوم المتوفر: الثلاثاء 1 تموز</span>
+    <div class="doctor-image"></div>
+    <div class="doctor-info">
+      <h3>د. عمار غانم</h3>
+      <span>التخصص: أمراض صدرية</span>
+      <span>اليوم المتوفر: الثلاثاء 1 تموز</span>
+    </div>
   </div>
 
   <div class="doctor-card">
-    <h3>د. حسان إسماعيل</h3>
-    <span>التخصص: أمراض القلب</span>
-    <span>الأيام المتوفرة: الثلاثاء والأربعاء 1 و2 تموز</span>
+    <div class="doctor-image"></div>
+    <div class="doctor-info">
+      <h3>د. حسان إسماعيل</h3>
+      <span>التخصص: أمراض القلب</span>
+      <span>الأيام المتوفرة: الثلاثاء والأربعاء 1 و2 تموز</span>
+    </div>
   </div>
 
   <div class="doctor-card">
-    <h3>د. يحيى بقدلية</h3>
-    <span>التخصص: علاج فيزيائي وعلاج ألم</span>
-    <span>اليوم المتوفر: الثلاثاء 1 تموز</span>
+    <div class="doctor-image"></div>
+    <div class="doctor-info">
+      <h3>د. يحيى بقدلية</h3>
+      <span>التخصص: علاج فيزيائي وعلاج ألم</span>
+      <span>اليوم المتوفر: الثلاثاء 1 تموز</span>
+    </div>
   </div>
 
   <div class="doctor-card">
-    <h3>د. أحمد يوسف سليمان</h3>
-    <span>التخصص: أمراض عصبية</span>
-    <span>الأيام المتوفرة: الأربعاء والخميس 9 و10 تموز</span>
+    <div class="doctor-image"></div>
+    <div class="doctor-info">
+      <h3>د. أحمد يوسف سليمان</h3>
+      <span>التخصص: أمراض عصبية</span>
+      <span>الأيام المتوفرة: الأربعاء والخميس 9 و10 تموز</span>
+    </div>
   </div>
 
   <div class="doctor-card">
-    <h3>د. باسل طه</h3>
-    <span>التخصص: كلى وباطنية</span>
-    <span>اليوم المتوفر: الأربعاء 2 تموز</span>
+    <div class="doctor-image"></div>
+    <div class="doctor-info">
+      <h3>د. باسل طه</h3>
+      <span>التخصص: كلى وباطنية</span>
+      <span>اليوم المتوفر: الأربعاء 2 تموز</span>
+    </div>
   </div>
 
   <div class="doctor-card">
-    <h3>د. مهند طه</h3>
-    <span>التخصص: أمراض صدرية</span>
-    <span>الأيام المتوفرة: الأربعاء والخميس 2 و3 تموز</span>
+    <div class="doctor-image"></div>
+    <div class="doctor-info">
+      <h3>د. مهند طه</h3>
+      <span>التخصص: أمراض صدرية</span>
+      <span>الأيام المتوفرة: الأربعاء والخميس 2 و3 تموز</span>
+    </div>
   </div>
 </section>
 
