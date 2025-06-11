@@ -65,45 +65,63 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      background-color: #f9f9f9;
-      padding: 1em;
+      background: linear-gradient(145deg, #ffffff, #f0f0f0);
+      padding: 1.5em;
       margin-bottom: 1.5em;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease-in-out;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .doctor-card:hover {
-      transform: scale(1.02);
+      transform: scale(1.03);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
     }
 
     .doctor-image {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
+      width: 120px;
+      height: 160px;
+      border-radius: 10px;
       background-color: #ccc;
-      background-image: url('https://via.placeholder.com/80');
       background-size: cover;
       background-position: center;
-      margin-left: 1em;
+      margin-left: 1.5em;
       flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border: 2px solid var(--primary-color);
     }
+
 
     .doctor-info {
       flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4em;
     }
 
     .doctor-card h3 {
-      margin: 0 0 0.3em 0;
-      color: var(--primary-color);
-      font-size: 1em;
+      margin: 0;
+      font-size: 1.2em;
+      color: #005f73;
+      font-weight: bold;
+      border-bottom: 1px solid var(--secondary-color);
+      padding-bottom: 0.2em;
     }
 
     .doctor-card span {
-      display: block;
-      font-size: 0.85em;
-      color: #222;
+      font-size: 0.9em;
+      font-weight: 500;
+      color: #444;
+      margin-top: 0.2em;
     }
+
+    .doctor-card p {
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 0.5em;
+      line-height: 1.6;
+    }
+
 
     .button {
       display: inline-block;
