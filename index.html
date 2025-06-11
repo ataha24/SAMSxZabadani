@@ -3,187 +3,175 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>حملة سامس الطبية المجانية في مستشفى الزبداني – تموز 2025</title>
+  <title>حملة سامس الطبية المجانية – الزبداني 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #0a9396;
-      --secondary-color: #e9f5f2;
-      --background-color: #fdfcfb;
-      --accent-color: #ee9b00;
-      --font-color: #333;
+      --primary: #00192c;
+      --secondary: #9ab6de;
+      --background: #fefefe;
+      --accent: #ee9b00;
+      --dark: #00192c; /* Darker blue */
+      --light: #9ab6de;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      font-family: 'Tahoma', sans-serif;
-      background-color: var(--background-color);
-      margin: 0;
-      padding: 0;
-      direction: rtl;
+      font-family: 'Cairo', sans-serif;
+      background: var(--background);
+      color: var(--dark);
       line-height: 1.8;
-      color: var(--font-color);
     }
 
     header {
-      background: linear-gradient(90deg, #005f73, var(--primary-color));
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: white;
-      padding: 3em 1em;
       text-align: center;
+      padding: 3em 1em;
       position: relative;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header img.logo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      margin-bottom: 1em;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
     }
 
     header h1 {
-      font-size: 2.4em;
+      font-size: 2.5em;
       margin-bottom: 0.5em;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
     }
 
     header p {
       font-size: 1.3em;
-      margin-bottom: 1.5em;
+      max-width: 650px;
+      margin: auto;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.1);
     }
 
     section {
-      padding: 2em 1em;
+      padding: 3em 1em;
       max-width: 1000px;
       margin: auto;
     }
 
     h2 {
-      color: var(--primary-color);
-      border-bottom: 2px solid var(--secondary-color);
-      padding-bottom: 0.5em;
-      margin-bottom: 1em;
-      font-size: 1.5em;
+      color: var(--primary);
+      font-size: 2em;
+      margin-bottom: 0.8em;
+      border-bottom: 3px solid var(--light);
+      padding-bottom: 0.4em;
+      position: relative;
+    }
+
+    h2::before {
+      content: "✨";
+      position: absolute;
+      right: -1.5em;
+      top: 0;
     }
 
     p {
-      margin-top: 0.5em;
-      font-size: 0.9em;
+      font-size: 1.05em;
+      margin-bottom: 1.2em;
     }
 
     .doctor-card {
+      background: white;
+      border-radius: 12px;
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      background: linear-gradient(145deg, #ffffff, #f0f0f0);
-      padding: 1.5em;
-      margin-bottom: 1.5em;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      flex-wrap: wrap;
+      align-items: stretch;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      margin-bottom: 1.2em;
+      transition: transform 0.3s ease;
     }
 
     .doctor-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+      transform: scale(1.02);
     }
 
     .doctor-image {
-      width: 120px;
-      height: 160px;
-      border-radius: 10px;
-      background-color: #ccc;
-      background-size: cover;
+      flex: 0 0 120px;
+      height: 180px;
+      background-size: contain;
+      background-repeat: no-repeat;
       background-position: center;
-      margin-left: 1.5em;
-      flex-shrink: 0;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      border: 2px solid var(--primary-color);
+      border-left: 4px solid var(--primary);
     }
-
 
     .doctor-info {
-      flex-grow: 1;
+      flex: 1;
+      padding: 1em;
       display: flex;
       flex-direction: column;
-      gap: 0.4em;
+      justify-content: center;
+      background: linear-gradient(to bottom right, var(--light), #ffffff);
     }
 
-    .doctor-card h3 {
-      margin: 0;
+    .doctor-info h3 {
+      color: var(--dark);
+      margin-bottom: 0.4em;
       font-size: 1.2em;
-      color: #005f73;
+    }
+
+    .doctor-info span {
+      display: block;
+      color: var(--primary);
       font-weight: bold;
-      border-bottom: 1px solid var(--secondary-color);
-      padding-bottom: 0.2em;
-    }
-
-    /* .doctor-card span {
-      font-size: 0.9em;
-      font-weight: 500;
-      color: #444;
-      margin-top: 0.2em;
-    }
-
-    .doctor-card p {
-      font-size: 0.9em;
-      color: #555;
-      margin-top: 0.5em;
-      line-height: 1.6;
-    } */
-
-    .doctor-card span {
-      position: relative;
+      margin-top: 0.4em;
       font-size: 0.95em;
-      font-weight: 600;
-      color: #004d4d;
-      margin-top: 0.3em;
-      padding-right: 1.2em;
-      line-height: 1.6;
     }
-
-    .doctor-card span::before {
-      content: "➤";
-      position: absolute;
-      right: 0;
-      color: var(--accent-color);
-      font-size: 0.9em;
-      line-height: 1;
-      top: 0.1em;
-    }
-
 
     .button {
       display: inline-block;
-      margin: 1em 0.5em 0 0;
-      background-color: var(--primary-color);
+      background-color: var(--accent);
       color: white;
-      padding: 1em 1.5em;
+      padding: 0.8em 1.5em;
+      border-radius: 50px;
       text-decoration: none;
-      border-radius: 10px;
       font-weight: bold;
-      transition: background 0.3s ease;
-      font-size: 0.9em;
+      font-size: 1em;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
 
     .button:hover {
-      background-color: #00757d;
+      background-color: #cc8500;
+      transform: scale(1.05);
     }
 
-    .form-wrapper {
+    .form-wrapper iframe {
       width: 100%;
-      max-width: 1000px;
-      margin: 2em auto 0 auto;
-      display: flex;
-      justify-content: center;
-      box-sizing: border-box;
-      padding: 0 1em;
-    }
-
-    iframe {
-      width: 100%;
-      min-width: 100%;
-      height: 2800px;
+      height: 2500px;
       border: none;
+      border-radius: 8px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     }
 
     footer {
-      background-color: #f0f0f0;
-      padding: 1.5em;
+      background: var(--light);
       text-align: center;
-      font-size: 0.8em;
-      color: #555;
-      border-top: 1px solid #ccc;
+      padding: 2em 1em;
+      font-size: 0.95em;
+      color: var(--dark);
+      border-top: 1px solid var(--secondary);
     }
 
     @media (max-width: 768px) {
@@ -193,137 +181,153 @@
       }
 
       .doctor-image {
-        margin: 0 0 1em 0;
+        width: 70%;
+        height: auto;
+        max-height: 240px;
+        margin: 0 auto;
+        aspect-ratio: 3 / 4;
+        border-left: none;
+        border-bottom: 4px solid var(--primary);
       }
 
-      iframe {
-        height: 3000px;
+      .doctor-info {
+        padding: 1.2em 1em;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      header p {
+        font-size: 1.1em;
       }
     }
   </style>
 </head>
 <body>
+  <header>
+    <img src="img/logo.jpeg" alt="SAMS Logo" class="logo">
+    <h1>🩺 حملة سامس الطبية – الزبداني تموز 2025 🩺</h1>
+    <p>تخصصات طبية متعددة بين يديك مجاناً من أطباء زائرين من الولايات المتحدة</p>
+    <br>
+    <a class="button" href="#register">📋 احجز موعدك الآن</a>
+  </header>
 
-<header>
-  <h1>🩺 حملة سامس الطبية المجانية في مستشفى الزبداني – تموز 2025 🩺</h1>
-  <p>تخصصات طبية متعددة بين يديك مجاناً من أطباء زائرين من الولايات المتحدة</p>
-  <a class="button" href="#register">سجل الآن</a>
-</header>
+  <section>
+    <h2>من نحن؟</h2>
+    <p>
+      الجمعية الطبية السورية الأمريكية (SAMS) هي منظمة إغاثية غير ربحية، تقدم خدمات طبية وإنسانية للاجئين والمجتمعات المتأثرة بالأزمات. تشمل أنشطتها حملات طبية مجانية، دعم المرافق الصحية، وتقديم التدريب الطبي، بقيادة أطباء مختصين من أنحاء العالم.
+    </p>
+  </section>
 
-<section>
-  <h2>من نحن؟</h2>
-  <p>
-    الجمعية الطبية السورية الأمريكية (SAMS) هي منظمة إغاثية غير ربحية، تقدم خدمات طبية وإنسانية للاجئين والمجتمعات المتأثرة بالأزمات. تشمل أنشطتها حملات طبية مجانية، دعم المرافق الصحية، وتقديم التدريب الطبي، بقيادة أطباء مختصين من أنحاء العالم.
-  </p>
-</section>
+  <section>
+    <h2>عن الحملة</h2>
+    <p>
+      تهدف حملة سامس إلى تزويد المجتمعات المحلية ذات الموارد المحدودة بخدمات طبية مجانية في عدة تخصصات، من خلال زيارة أطباء متطوعين من الولايات المتحدة خلال الأسبوعين الأول والثاني من شهر تموز 2025. تشمل الحملة استشارات في أمراض القلب، الأمراض الصدرية، الأعصاب، الكلى، والعلاج الفيزيائي.
+    </p>
+    <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
+      <li><strong>الموقع:</strong> مستشفى الزبداني الوطني</li>
+      <li><strong>الوقت:</strong> من الساعة ١٠ صباحاً حتى ٢ ظهراً</li>
+    </ul>
+  </section>
 
-<section>
-  <h2>عن الحملة</h2>
-  <p>
-    تهدف حملة سامس إلى تزويد المجتمعات المحلية ذات الموارد المحدودة بخدمات طبية مجانية في عدة تخصصات، من خلال زيارة أطباء متطوعين من الولايات المتحدة خلال الأسبوعين الأول والثاني من شهر تموز 2025. تشمل الحملة استشارات في أمراض القلب، الأمراض الصدرية، الأعصاب، الكلى، والعلاج الفيزيائي.
-  </p>
-</section>
-
-<section>
-  <h2>الأطباء الزائرون ومواعيدهم</h2>
-  <div class="doctor-card">
-    <div class="doctor-image" style="background-image: url('img/DRAG.png');"></div>
-    <div class="doctor-info">
-      <h3>د. عمار غانم، MD</h3>
-      <span>التخصص: الأمراض الصدرية والعناية المركزة</span>
-      <span>اليوم المتوفر: الثلاثاء 1 تموز</span>
-      <p>
-        طبيب مختص في الأمراض الصدرية والعناية المركزة، حاصل على البورد الأمريكي في الطب الباطني، الأمراض الصدرية، والعناية الحرجة. أكمل تدريبه في ولايتي بنسلفانيا ووست فرجينيا، ويزاول عمله حالياً في ولاية ميشيغان.
-      </p>
+  <section>
+    <h2>الأطباء الزائرون ومواعيدهم</h2>
+    <div class="doctor-card">
+      <div class="doctor-image" style="background-image: url('img/DRAG.png');"></div>
+      <div class="doctor-info">
+        <h3>د. عمار غانم، MD</h3>
+        <span>التخصص: الأمراض الصدرية والعناية المركزة</span>
+        <span>اليوم المتوفر: الثلاثاء 1 تموز</span>
+        <p>
+          طبيب مختص في الأمراض الصدرية والعناية المركزة، حاصل على البورد الأمريكي في الطب الباطني، الأمراض الصدرية، والعناية الحرجة. أكمل تدريبه في ولايتي بنسلفانيا ووست فرجينيا، ويزاول عمله حالياً في ولاية ميشيغان.
+        </p>
+      </div>
     </div>
-  </div>
 
-  <div class="doctor-card">
-    <div class="doctor-image" style="background-image: url('img/DRHI.png');"></div>
-    <div class="doctor-info">
-      <h3>د. حسان إسماعيل، MD, MPH, FACP, FACC, FSCAI</h3>
-      <span>التخصص: أمراض القلب والتداخل القلبي</span>
-      <span>الأيام المتوفرة: الثلاثاء والأربعاء 1 و2 تموز</span>
-      <p>
-        طبيب قلب حاصل على البورد الأمريكي في أمراض القلب والتداخل القلبي. أكمل تدريبه في ولايات تكساس، كارولاينا الشمالية، تينيسي، وميشيغان. يعمل حالياً في ولاية ميشيغان ويُعرف بخبرته الواسعة في معالجة أمراض القلب البنيوية والتداخلية.
-      </p>
+    <div class="doctor-card">
+      <div class="doctor-image" style="background-image: url('img/DRHI.png');"></div>
+      <div class="doctor-info">
+        <h3>د. حسان إسماعيل، MD, MPH, FACP, FACC, FSCAI</h3>
+        <span>التخصص: أمراض القلب والتداخل القلبي</span>
+        <span>الأيام المتوفرة: الثلاثاء والأربعاء 1 و 2 تموز</span>
+        <p>
+          طبيب قلب حاصل على البورد الأمريكي في أمراض القلب والتداخل القلبي. أكمل تدريبه في ولايات تكساس، كارولاينا الشمالية، تينيسي، وميشيغان. يعمل حالياً في ولاية ميشيغان ويُعرف بخبرته الواسعة في معالجة أمراض القلب البنيوية والتداخلية.
+        </p>
+      </div>
     </div>
-  </div>
 
-  <div class="doctor-card">
-    <div class="doctor-image" style="background-image: url('img/DRBT.png');"></div>
-    <div class="doctor-info">
-      <h3>د. باسل طه، MD</h3>
-      <span>التخصص: أمراض الكلى والباطنية</span>
-      <span>اليوم المتوفر: الأربعاء 2 تموز</span>
-      <p>
-        طبيب مختص في أمراض الكلى والباطنية، حاصل على البورد الأمريكي في الطب الباطني وأمراض الكلى. أكمل تدريبه في ولايتي ميشيغان وأوهايو، ويزاول عمله حالياً في الولايات المتحدة.
-      </p>
+    <div class="doctor-card">
+      <div class="doctor-image" style="background-image: url('img/DRBT.png');"></div>
+      <div class="doctor-info">
+        <h3>د. باسل طه، MD</h3>
+        <span>التخصص: أمراض الكلى والباطنية</span>
+        <span>اليوم المتوفر: الأربعاء 2 تموز</span>
+        <p>
+          طبيب مختص في أمراض الكلى والباطنية، حاصل على البورد الأمريكي في الطب الباطني وأمراض الكلى. أكمل تدريبه في ولايتي ميشيغان وأوهايو، ويزاول عمله حالياً في الولايات المتحدة.
+        </p>
+      </div>
     </div>
-  </div>
 
 
-  <div class="doctor-card">
-    <div class="doctor-image" style="background-image: url('img/DRMT.png');"></div>
-    <div class="doctor-info">
-      <h3>د. مهند طه، MD</h3>
-      <span>التخصص: الأمراض الصدرية والعناية المركزة</span>
-      <span>الأيام المتوفرة: الأربعاء والخميس 2 و3 تموز</span>
-      <p>
-        طبيب مختص في الأمراض الصدرية والعناية المركزة، حاصل على البورد الأمريكي في الطب الباطني، الأمراض الصدرية، والعناية الحرجة. أكمل تدريبه في ولاية ميشيغان، ويزاول عمله حالياً في الولايات المتحدة.
-      </p>
+    <div class="doctor-card">
+      <div class="doctor-image" style="background-image: url('img/DRMT.png');"></div>
+      <div class="doctor-info">
+        <h3>د. مهند طه، MD</h3>
+        <span>التخصص: الأمراض الصدرية والعناية المركزة</span>
+        <span>الأيام المتوفرة: الأربعاء والخميس 2 و 3 تموز</span>
+        <p>
+          طبيب مختص في الأمراض الصدرية والعناية المركزة، حاصل على البورد الأمريكي في الطب الباطني، الأمراض الصدرية، والعناية الحرجة. أكمل تدريبه في ولاية ميشيغان، ويزاول عمله حالياً في الولايات المتحدة.
+        </p>
+      </div>
     </div>
-  </div>
 
-  <div class="doctor-card">
-    <div class="doctor-image" style="background-image: url('img/DRYB.png');"></div>
-    <div class="doctor-info">
-      <h3>د. يحيى بقدلية، MD, MMM</h3>
-      <span>التخصص: علاج فيزيائي وعلاج ألم</span>
-      <span>اليوم المتوفر: الثلاثاء 1 تموز</span>
-      <p>
-        طبيب مختص في العلاج الفيزيائي وعلاج الألم، يتمتع بخبرة تزيد عن 13 عامًا في مجال الطب التداخلي للألم. أكمل تدريبه في ولاية كانساس، ويحمل درجة ماجستير في الإدارة الطبية من جامعة كارنيغي ميلون. يعمل حالياً في ولاية أوهايو.
-      </p>
+    <div class="doctor-card">
+      <div class="doctor-image" style="background-image: url('img/DRYB.png');"></div>
+      <div class="doctor-info">
+        <h3>د. يحيى بقدلية، MD, MMM</h3>
+        <span>التخصص: علاج فيزيائي وعلاج ألم</span>
+        <span>اليوم المتوفر: الثلاثاء 1 تموز</span>
+        <p>
+          طبيب مختص في العلاج الفيزيائي وعلاج الألم، يتمتع بخبرة تزيد عن 13 عامًا في مجال الطب التداخلي للألم. أكمل تدريبه في ولاية كانساس، ويحمل درجة ماجستير في الإدارة الطبية من جامعة كارنيغي ميلون. يعمل حالياً في ولاية أوهايو.
+        </p>
+      </div>
     </div>
-  </div>
 
-  <div class="doctor-card">
-    <div class="doctor-image" style="background-image: url('img/DRAY.png');"></div>
-    <div class="doctor-info">
-      <h3>د. أحمد يوسف سليمان، MD</h3>
-      <span>التخصص: أمراض عصبية والصرع</span>
-      <span>الأيام المتوفرة: الخميس 10 تموز</span>
-      <p>
-        طبيب أعصاب مختص في الصرع، حاصل على البورد الأمريكي في الأمراض العصبية والصرع. أكمل تدريبه في ولايتي تكساس وميشيغان، ويعمل حالياً في مركز هنري فورد لعلاج الصرع، بالإضافة إلى عمله كأستاذ مساعد في كلية الطب بجامعة وين ستيت.
-      </p>
+    <div class="doctor-card">
+      <div class="doctor-image" style="background-image: url('img/DRAY.png');"></div>
+      <div class="doctor-info">
+        <h3>د. أحمد يوسف سليمان، MD</h3>
+        <span>التخصص: أمراض عصبية والصرع</span>
+        <span>الأيام المتوفرة: الخميس 10 تموز</span>
+        <p>
+          طبيب أعصاب مختص في الصرع، حاصل على البورد الأمريكي في الأمراض العصبية والصرع. أكمل تدريبه في ولايتي تكساس وميشيغان، ويعمل حالياً في مركز هنري فورد لعلاج الصرع، بالإضافة إلى عمله كأستاذ مساعد في كلية الطب بجامعة وين ستيت.
+        </p>
+      </div>
     </div>
-  </div>
 
 
-</section>
-  
-<section>
-  <h2>هل لديك سؤال؟</h2>
-  <p>يمكنك التواصل معنا عبر الطرق التالية:</p>
-  <a class="button" href="mailto:samsxzabadani@gmail.com">راسلنا عبر البريد الإلكتروني</a>
-  <a class="button" href="https://wa.me/15198722939" target="_blank">تواصل معنا على واتساب</a>
-</section>
-  
-<section id="register">
-  <h2>📋 سجل الآن</h2>
-  <p>
-    يرجى تعبئة النموذج التالي لتحديد التخصص المناسب وتسهيل التواصل معك:
-  </p>
-  <div class="form-wrapper">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfmPJ3h-j3PnB_vn9yZkwMJtLt5Tsjj7gyl55ot9vOfBjcavQ/viewform?embedded=true" allowfullscreen>
-      يبدو أن النموذج لم يتم تحميله. <a href="https://docs.google.com/forms/d/e/1FAIpQLSfmPJ3h-j3PnB_vn9yZkwMJtLt5Tsjj7gyl55ot9vOfBjcavQ/viewform" target="_blank">اضغط هنا لفتحه مباشرة</a>.
-    </iframe>
-  </div>
-</section>
-
-<footer>
-  © حملة سامس الطبية في الزبداني 2025 – جميع الحقوق محفوظة.
-</footer>
-
+  </section>
+    
+  <section>
+    <h2>هل لديك سؤال؟</h2>
+    <p>يمكنك التواصل معنا عبر الطرق التالية:</p>
+    <a class="button" href="mailto:samsxzabadani@gmail.com">راسلنا عبر البريد الإلكتروني</a>
+    <a class="button" href="https://wa.me/15198722939" target="_blank">تواصل معنا على واتساب</a>
+  </section>
+    
+  <section id="register">
+    <h2>📋 سجل الآن</h2>
+    <p>
+      يرجى تعبئة النموذج التالي لتحديد التخصص المناسب وتسهيل التواصل معك:
+    </p>
+    <div class="form-wrapper">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfmPJ3h-j3PnB_vn9yZkwMJtLt5Tsjj7gyl55ot9vOfBjcavQ/viewform?embedded=true" allowfullscreen>
+        يبدو أن النموذج لم يتم تحميله. <a href="https://docs.google.com/forms/d/e/1FAIpQLSfmPJ3h-j3PnB_vn9yZkwMJtLt5Tsjj7gyl55ot9vOfBjcavQ/viewform" target="_blank">اضغط هنا لفتحه مباشرة</a>.
+      </iframe>
+    </div>
+  </section>
+  <footer>
+    © حملة سامس الطبية في الزبداني 2025 – كل الشكر للداعمين والمتطوعين.
+  </footer>
 </body>
-</html>
