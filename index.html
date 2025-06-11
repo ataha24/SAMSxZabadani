@@ -108,7 +108,7 @@
       padding-bottom: 0.2em;
     }
 
-    .doctor-card span {
+    /* .doctor-card span {
       font-size: 0.9em;
       font-weight: 500;
       color: #444;
@@ -120,6 +120,26 @@
       color: #555;
       margin-top: 0.5em;
       line-height: 1.6;
+    } */
+
+    .doctor-card span {
+      position: relative;
+      font-size: 0.95em;
+      font-weight: 600;
+      color: #004d4d;
+      margin-top: 0.3em;
+      padding-right: 1.2em;
+      line-height: 1.6;
+    }
+
+    .doctor-card span::before {
+      content: "➤";
+      position: absolute;
+      right: 0;
+      color: var(--accent-color);
+      font-size: 0.9em;
+      line-height: 1;
+      top: 0.1em;
     }
 
 
